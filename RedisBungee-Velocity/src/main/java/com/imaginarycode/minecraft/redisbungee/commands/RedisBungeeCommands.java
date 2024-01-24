@@ -112,8 +112,12 @@ public class RedisBungeeCommands {
                         return;
                     }
                     ServerInfo si = plugin.getProxy().getServer(plugin.getAbstractRedisBungeeApi().getServerNameFor(uuid)).map(RegisteredServer::getServerInfo).orElse(null);
+                    ServerInfo proxy = plugin.getProxy().getServer(plugin.getAbstractRedisBungeeApi().getProxy(uuid)).map(RegisteredServer::getServerInfo).orElse(null);
+
                     if (si != null) {
-                        Component message = Component.text(args[0] + " is on " + si.getName() + ".", NamedTextColor.BLUE);
+                        Component message = Component.text(args[0] + " is on Server " + si.getName() + ".", NamedTextColor.BLUE);
+                        Component proxyMessage = Component.text(args[0] + " is on Proxy " + proxy);
+
                         sender.sendMessage(message);
                     } else {
                         sender.sendMessage(PLAYER_NOT_FOUND);
