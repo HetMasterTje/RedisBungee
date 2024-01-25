@@ -119,6 +119,7 @@ public class RedisBungeeCommands {
                         Component proxyMessage = Component.text(args[0] + " is on Proxy " + proxy);
 
                         sender.sendMessage(message);
+                        sender.sendMessage(proxyMessage);
                     } else {
                         sender.sendMessage(PLAYER_NOT_FOUND);
                     }
