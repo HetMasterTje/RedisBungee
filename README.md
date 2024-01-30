@@ -1,4 +1,5 @@
 # RedisBungee fork By Limework
+# a fork of a Fork just for my custom features 
 
 *if you are here for transferring players to another proxy when the first proxy crashes or whatever this plugin won't do it, tell mojang to implement transfer packet*.
 [Click here, for more information about transfer packet](https://hypixel.net/threads/why-do-we-need-transfer-packets.1390307/)
